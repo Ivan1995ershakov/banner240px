@@ -189,15 +189,40 @@ function handleComplete(evt,comp) {
 	65%{opacity: 0; left:40px;}
 /* } */
 }
+.h3{
+font-family: 'Poppins', sans-serif;
+position: absolute;
+z-index: 100;
+text-align: right;
+color:white;
+font-size: 27px;
+top: 263px;
+left:50px;
+letter-spacing: 1px;
+animation-name: h3;
+animation-delay: 1.5s;
+animation-duration: 7s;
+animation-iteration-count: infinite;
+opacity:0;
+}
+
+@keyframes h3 {
+	0%{opacity: 0;}
+	10%{opacity:0;left:63px;}
+	30%{opacity:1;left: 50px;}
+	50%{opacity: 1; left:50px;}
+	70%{opacity: 0;left: 37px;}
+	100%{opacity: 0;left: 37px;}
+  }
 .h1{
 	font-family: 'Poppins', sans-serif;
 	position: absolute;
   z-index: 100;
 	text-align: right;
 	color:white;
-	font-size: 25px;
-	top: 274px;
-	left:50px;
+	font-size: 17px;
+	top: 305px;
+	left:93px;
   letter-spacing: 1px;
 	animation-name: h1;
 	animation-delay: 1.5s;
@@ -207,36 +232,36 @@ function handleComplete(evt,comp) {
 }
 @keyframes h1 {
 	0%{opacity: 0;}
-	10%{opacity:0;left:63px;}
-	30%{opacity:1;left: 50px;}
-	50%{opacity: 1; left:50px;}
-	70%{opacity: 0;left: 37px;}
-	100%{opacity: 0;left: 37px;}
- }
+	10%{opacity:0;left:106px;}
+	30%{opacity:1;left: 93px;}
+	50%{opacity: 1; left:93px;}
+	70%{opacity: 0;left: 80px;}
+	100%{opacity: 0;left: 80px;}
+  }
 .h2{
 	font-family: 'Poppins', sans-serif;
 	position: absolute;
   z-index: 100;
 	text-align: right;
 	color:white;
-	font-size: 25px;
-	top: 304px;
-	left:30px;
+	font-size: 17px;
+	top: 327px;
+	left:77px;
   letter-spacing: 1px;
 	animation-name: h2;
 	animation-duration: 7s;
 	animation-delay: 1.5s;
 	animation-iteration-count: infinite;
-	opacity:0
+	opacity:0;
 
 }
 @keyframes h2 {
 	0%{opacity: 0;}
-	15%{opacity:0;left:43px;}
-	35%{opacity:1;left: 30px;}
-	55%{opacity: 1; left:30px;}
-	75%{opacity: 0;left: 17px;}
-	100%{opacity: 0;left: 17px;}
+	15%{opacity:0;left:83px;}
+	35%{opacity:1;left: 77px;}
+	55%{opacity: 1; left:77px;}
+	75%{opacity: 0;left: 53px;}
+	100%{opacity: 0;left: 53px;}
  }
 </style>
 </head>
@@ -250,6 +275,7 @@ function handleComplete(evt,comp) {
 
 	 <p class="p1">QAZEXPO</p>
 	 <p class="p2">congress</p>
+	 <h1 class="h3">NUR ARLEM</h1>
    <h1 class="h1">ДАРИ ВРЕМЯ</h1><h1 class="h2"> СВОЕЙ СЕМЬЕ</h1>
 	<a href="javascript:window.open(window.clickTag)">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">

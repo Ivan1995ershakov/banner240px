@@ -181,14 +181,19 @@ function handleComplete(evt,comp) {
 	animation-name: text_img2;
 	animation-duration: 6s;
 	animation-iteration-count: infinite;
-}}
+}
 /* @keyframes text_img2 {
 	5%{opacity: 0; left:66px;}
 	25%{opacity: 1; left:53px;}
 	45%{opacity:1; left:53px;}
 	65%{opacity: 0; left:40px;}
+/* } */
 }
-} */
+h1{
+	position: absolute;
+  z-index: 100;
+	color:red;
+}
 </style>
 </head>
 <body onload="init();" style="margin:0px;">
@@ -202,6 +207,7 @@ function handleComplete(evt,comp) {
  </div>
 	 <p class="p1">QAZEXPO</p>
 	 <p class="p2">congress</p>
+	 <h1>Время</h1>
 
 	<a href="javascript:window.open(window.clickTag)">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">

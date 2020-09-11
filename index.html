@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Разработчик Максим Сельденков lozarium@gmail.com  -->
+<meta charset="UTF-8" name="ad.size" content="width=240,height=400">
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<meta http-equiv='pragma' content='no-cache' />
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, user-scalable=0, width=device-width, height=device-height'/>
+<title>index</title>
+<script type="text/javascript">
+var clickTag = "https://qazexpocongress.kz/ru/page_id=192"; </script>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="index.js"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("08BA17FD75025F42892F647BA85D67D6");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.index();
+	stage = new lib.Stage(canvas);
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.setFPS(lib.properties.fps);
+		createjs.Ticker.addEventListener("tick", stage);
+	}
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<style media="screen">
+		.img1{
+			position: absolute;
+			z-index: 100;
+		}
+		.img2{
+			position: absolute;
+			z-index: 100;
+			top:70px;
+			left:5px;
+		}
+		.img1 img{
+			width:130px;
+		}
+		.img1 {
+			animation-name: img1;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes img1 {
+			40%{width:0%; opacity: 0; top:6px; }
+			50%{width:100%; opacity:1; top:0px;}
+			60%{width:150%; opacity: 0; top:-7px;}
+		}
+		.p1{
+			position: absolute;
+			font-family: 'Kumbh Sans', sans-serif;
+			font-size: 20px;
+			top: 70px;
+			left:19px;
+			color: white;
+			z-index: 100;
+			animation-name:p1;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes p1 {
+			40%{opacity:0; top:60px;}
+			50%{opacity:1; top:70px;}
+			60%{opacity:0; top:80px;}
+		}
+		.p2{
+			position: absolute;
+			top: 94px;
+			left:30px;
+			font-family: 'Kumbh Sans', sans-serif;
+			font-size: 19px;
+			color: white;
+			z-index: 100;
+			animation-name: p2;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+		}
+		@keyframes p2 {
+			40%{opacity:0; top:80px;}
+			50%{opacity:1; top:90px;}
+			60%{opacity:0; top:100px;}
+		}
+		.text_img1{
+			position: absolute;
+			z-index: 100;
+			top:278px;
+			left: 147px;
+			animation-name: text_img1;
+			animation-duration:7s;
+			animation-iteration-count: infinite;
+			opacity: 1;
+		}
+		@keyframes text_img1 {
+      0%{opacity: 0;}
+			10%{opacity:0;left:160px;}
+			30%{opacity:1;left: 147px;}
+			50%{opacity: 1; left:147px;}
+			70%{opacity: 0;left: 134px;}
+			100%{opacity: 0;left: 134px;}
+		 }
+		.text_img1 img{
+			width:32%;
+		}
+		.text_img2{
+			position: absolute;
+			z-index: 100;
+			top:303px;
+			left: 47px;
+			animation-name: text_img2;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			opacity: 1;
+		}
+		@keyframes text_img2 {
+			0%{opacity: 0;}
+			13%{opacity:0;left:60px;}
+			33%{opacity:1;left: 47px;}
+			53%{opacity: 1; left:47px;}
+			73%{opacity: 0;left: 34px;}
+			100%{opacity: 0;left: 34px;}
+		}
+		.text_img2 img{
+			width:32%;
+		}
+		.text_img3{
+			position: absolute;
+			z-index: 100;
+			top:330px;
+			left: 128px;
+			animation-name: text_img3;
+			animation-duration: 7s;
+			animation-iteration-count: infinite;
+			opacity: 1;
+		}
+		@keyframes text_img3 {
+			0%{opacity: 0;}
+			15%{opacity:0;left:141px;}
+			35%{opacity:1;left: 128px;}
+			55%{opacity: 1; left:128px;}
+			75%{opacity: 0;left: 115px;}
+			100%{opacity: 0;left: 115px;}
+		}
+		.text_img3 img{
+			width:32%;
+		}
+@media screen and (max-width: 700px) and (min-width: 10px) {
+.text_img2{
+	position: absolute;
+	z-index: 100;
+	width:120%;
+	top:303px;
+	left: 53px;
+	animation-name: text_img2;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	opacity: 0;
+}
+@keyframes text_img2 {
+	5%{opacity: 0; left:66px;}
+	25%{opacity: 1; left:53px;}
+	45%{opacity:1; left:53px;}
+	65%{opacity: 0; left:40px;}
+}
+}
+</style>
+</head>
+<body onload="init();" style="margin:0px;">
+	<div class="img1">
+		<img src="images/logo/logo.png" alt="">
+	 </div>
+	 <div class=text_img>
+	 <div class="text_img1"><img src="images/text1.png" alt=""></div>
+	 <div class="text_img2"><img src="images/text2.png" alt=""></div>
+	 <div class="text_img3"><img src="images/text3.png" alt=""></div>
+ </div>
+	 <p class="p1">QAZEXPO</p>
+	 <p class="p2">congress</p>
+
+	<a href="javascript:window.open(window.clickTag)">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">
+		<canvas id="canvas" width="240" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);">
+
+		</canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:240px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+	</a>
+</body>
+</html>

@@ -189,24 +189,66 @@ function handleComplete(evt,comp) {
 	65%{opacity: 0; left:40px;}
 /* } */
 }
-h1{
+.h1{
+	font-family: 'Poppins', sans-serif;
 	position: absolute;
   z-index: 100;
-	color:red;
+	text-align: right;
+	color:white;
+	font-size: 25px;
+	top: 274px;
+	left:50px;
+  letter-spacing: 1px;
+	animation-name: h1;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	opacity: 0;
 }
+@keyframes h1 {
+	0%{opacity: 0;}
+	10%{opacity:0;left:63px;}
+	30%{opacity:1;left: 50px;}
+	50%{opacity: 1; left:50px;}
+	70%{opacity: 0;left: 37px;}
+	100%{opacity: 0;left: 37px;}
+ }
+.h2{
+	font-family: 'Poppins', sans-serif;
+	position: absolute;
+  z-index: 100;
+	text-align: right;
+	color:white;
+	font-size: 25px;
+	top: 304px;
+	left:30px;
+  letter-spacing: 1px;
+	animation-name: h2;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	opacity:0
+
+}
+@keyframes h2 {
+	0%{opacity: 0;}
+	15%{opacity:0;left:43px;}
+	35%{opacity:1;left: 30px;}
+	55%{opacity: 1; left:30px;}
+	75%{opacity: 0;left: 17px;}
+	100%{opacity: 0;left: 17px;}
+ }
 </style>
 </head>
 <body onload="init();" style="margin:0px;">
-	<div class="text_img1"><img src="images/text1.png" alt=""></div>
+	<!-- <div class="text_img1"><img src="images/text1.png" alt=""></div>
   <div class="text_img2"><img src="images/text2.png" alt=""></div>
-  <div class="text_img3"><img src="images/text3.png" alt=""></div>
+  <div class="text_img3"><img src="images/text3.png" alt=""></div> -->
 	<div class="img1">
 		<img src="images/logo/logo.png" alt="">
 	 </div>
 
 	 <p class="p1">QAZEXPO</p>
 	 <p class="p2">congress</p>
-<h1>Время</h1>
+   <h1 class="h1">ДАРИ ВРЕМЯ</h1><h1 class="h2"> СВОЕЙ СЕМЬЕ</h1>
 	<a href="javascript:window.open(window.clickTag)">
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">
 		<canvas id="canvas" width="240" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);">

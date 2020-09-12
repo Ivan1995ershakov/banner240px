@@ -148,7 +148,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	// Слой_1
 	this.shape = new cjs.Shape();
 	this.shape.graphics.f("#FFFFFF").s().p("AzENeIAMxtMAl8gJOIABa7g");
-
+  this.shape.setTransform(0,-40);
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 
 }).prototype = getMCSymbolPrototype(lib.Символ13, new cjs.Rectangle(-122.1,-86.2,244.2,172.4), null);
@@ -159,8 +159,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	// Слой_1
 	this.shape = new cjs.Shape();
-	this.shape.graphics.f("#044B7C").s().p("AzEQwIAM4RMAl8gJOMAABAhfg");
-	this.shape.setTransform(0,21);
+	this.shape.graphics.f("#246463").s().p("AzEQwIAM4RMAl8gJOMAABAhfg");
+	this.shape.setTransform(0,-19);
 
 	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
 

@@ -56,30 +56,29 @@ function handleComplete(evt,comp) {
 <style media="screen">
 		.img1{
 			position: absolute;
+			top:220px;
+			left:55px;
 			z-index: 100;
-		}
-		.img2{
-			position: absolute;
-			z-index: 100;
-			top:70px;
-			left:5px;
+			opacity: 0;
 		}
 		.img1 img{
 			width:130px;
 		}
 		.img1 {
 			animation-name: img1;
-			animation-duration: 10s;
+			animation-duration: 8s;
 			animation-iteration-count: infinite;
 		}
 		@keyframes img1 {
-			40%{width:0%; opacity: 0; top:6px; }
-			50%{width:100%; opacity:1; top:0px;}
-			60%{width:150%; opacity: 0; top:-7px;}
+			0%{opacity: 0; top:230px; }
+			35%{opacity:1; top:220px;}
+			65%{opacity:1; top:220px;}
+			75%{opacity: 0; top:210px;}
+			/* 100%{opacity: 0;} */
 		}
 		.p1{
 			position: absolute;
-			font-family: 'Kumbh Sans', sans-serif;
+			font-family: 'Montserrat', sans-serif;
 			font-size: 20px;
 			top: 70px;
 			left:19px;
@@ -98,7 +97,7 @@ function handleComplete(evt,comp) {
 			position: absolute;
 			top: 94px;
 			left:30px;
-			font-family: 'Kumbh Sans', sans-serif;
+			font-family: 'Montserrat', sans-serif;
 			font-size: 19px;
 			color: white;
 			z-index: 100;
@@ -111,93 +110,15 @@ function handleComplete(evt,comp) {
 			50%{opacity:1; top:90px;}
 			60%{opacity:0; top:100px;}
 		}
-		.text_img1{
-			position: absolute;
-			z-index: 100;
-			top:278px;
-			left: 147px;
-			animation-name: text_img1;
-			animation-duration:7s;
-			animation-iteration-count: infinite;
-		}
-		/* @keyframes text_img1 {
-      0%{opacity: 0;}
-			10%{opacity:0;left:160px;}
-			30%{opacity:1;left: 147px;}
-			50%{opacity: 1; left:147px;}
-			70%{opacity: 0;left: 134px;}
-			100%{opacity: 0;left: 134px;}
-		 } */
-		.text_img1 img{
-			width:32%;
-		}
-		.text_img2{
-			position: absolute;
-			z-index: 100;
-			top:303px;
-			left: 47px;
-			animation-name: text_img2;
-			animation-duration: 7s;
-			animation-iteration-count: infinite;
-		}
-		/* @keyframes text_img2 {
-			0%{opacity: 0;}
-			13%{opacity:0;left:60px;}
-			33%{opacity:1;left: 47px;}
-			53%{opacity: 1; left:47px;}
-			73%{opacity: 0;left: 34px;}
-			100%{opacity: 0;left: 34px;}
-		} */
-		.text_img2 img{
-			width:32%;
-		}
-		.text_img3{
-			position: absolute;
-			z-index: 100;
-			top:330px;
-			left: 128px;
-			animation-name: text_img3;
-			animation-duration: 7s;
-			animation-iteration-count: infinite;
-		}
-		/* @keyframes text_img3 {
-			0%{opacity: 0;}
-			15%{opacity:0;left:141px;}
-			35%{opacity:1;left: 128px;}
-			55%{opacity: 1; left:128px;}
-			75%{opacity: 0;left: 115px;}
-			100%{opacity: 0;left: 115px;}
-		} */
-		.text_img3 img{
-			width:32%;
-		}
-@media screen and (max-width: 700px) and (min-width: 10px) {
-.text_img2{
-	position: absolute;
-	z-index: 100;
-	width:120%;
-	top:303px;
-	left: 53px;
-	animation-name: text_img2;
-	animation-duration: 6s;
-	animation-iteration-count: infinite;
-}
-/* @keyframes text_img2 {
-	5%{opacity: 0; left:66px;}
-	25%{opacity: 1; left:53px;}
-	45%{opacity:1; left:53px;}
-	65%{opacity: 0; left:40px;}
-/* } */
-}
 .h3{
-font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 position: absolute;
 z-index: 100;
 text-align: right;
 color:white;
-font-size: 27px;
-top: 263px;
-left:50px;
+font-size:21px;
+top: 285px;
+left:60px;
 letter-spacing: 1px;
 animation-name: h3;
 animation-delay: 1.5s;
@@ -208,22 +129,23 @@ opacity:0;
 
 @keyframes h3 {
 	0%{opacity: 0;}
-	10%{opacity:0;left:63px;}
-	30%{opacity:1;left: 50px;}
-	50%{opacity: 1; left:50px;}
-	70%{opacity: 0;left: 37px;}
-	100%{opacity: 0;left: 37px;}
+	10%{opacity:0;left:70px;}
+	30%{opacity:1;left: 60px;}
+	50%{opacity: 1; left:60px;}
+	70%{opacity: 0;left: 50px;}
+	100%{opacity: 0;left: 50px;}
   }
 .h1{
-	font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 	position: absolute;
   z-index: 100;
 	text-align: right;
 	color:white;
-	font-size: 17px;
-	top: 305px;
-	left:93px;
+	font-size: 11px;
+	top: 320px;
+	left:78px;
   letter-spacing: 1px;
+	font-weight: 500;
 	animation-name: h1;
 	animation-delay: 1.5s;
 	animation-duration: 7s;
@@ -232,21 +154,22 @@ opacity:0;
 }
 @keyframes h1 {
 	0%{opacity: 0;}
-	10%{opacity:0;left:106px;}
-	30%{opacity:1;left: 93px;}
-	50%{opacity: 1; left:93px;}
-	70%{opacity: 0;left: 80px;}
-	100%{opacity: 0;left: 80px;}
+	10%{opacity:0;left:88px;}
+	30%{opacity:1;left: 78px;}
+	50%{opacity: 1; left:78px;}
+	70%{opacity: 0;left: 68px;}
+	100%{opacity: 0;left: 68px;}
   }
 .h2{
-	font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
 	position: absolute;
   z-index: 100;
 	text-align: right;
 	color:white;
-	font-size: 17px;
-	top: 327px;
-	left:77px;
+	font-size: 11px;
+	top: 335px;
+	font-weight: 500;
+	left:74px;
   letter-spacing: 1px;
 	animation-name: h2;
 	animation-duration: 7s;
@@ -257,11 +180,11 @@ opacity:0;
 }
 @keyframes h2 {
 	0%{opacity: 0;}
-	15%{opacity:0;left:83px;}
-	35%{opacity:1;left: 77px;}
-	55%{opacity: 1; left:77px;}
-	75%{opacity: 0;left: 53px;}
-	100%{opacity: 0;left: 53px;}
+	15%{opacity:0;left:84px;}
+	35%{opacity:1;left: 74px;}
+	55%{opacity: 1; left:74px;}
+	75%{opacity: 0;left: 64px;}
+	100%{opacity: 0;left: 64px;}
  }
 </style>
 </head>
@@ -270,11 +193,8 @@ opacity:0;
   <div class="text_img2"><img src="images/text2.png" alt=""></div>
   <div class="text_img3"><img src="images/text3.png" alt=""></div> -->
 	<div class="img1">
-		<img src="images/logo/logo.png" alt="">
+		<img src="images/logo/logo1.png" alt="">
 	 </div>
-
-	 <p class="p1">QAZEXPO</p>
-	 <p class="p2">congress</p>
 	 <h1 class="h3">NUR ALEM</h1>
    <h1 class="h1">ДАРИ ВРЕМЯ</h1><h1 class="h2"> СВОЕЙ СЕМЬЕ</h1>
 	<a href="javascript:window.open(window.clickTag)">
